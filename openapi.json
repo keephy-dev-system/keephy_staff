@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "staff-service", "version": "0.1.0" },
+  "paths": {
+    "/health": { "get": { "responses": { "200": { "description": "ok" } } } },
+    "/ready": { "get": { "responses": { "200": { "description": "ready" }, "503": { "description": "not ready" } } } },
+    "/staff": { "post": { "responses": { "201": { "description": "created" }, "409": { "description": "duplicate" } } }, "get": { "responses": { "200": { "description": "list" } } } },
+    "/staff/{id}": { "patch": { "responses": { "200": { "description": "ok" }, "404": { "description": "not found" } } }, "delete": { "responses": { "200": { "description": "ok" }, "404": { "description": "not found" } } } },
+    "/staff/{id}/schedule": { "post": { "responses": { "201": { "description": "created" }, "404": { "description": "not found" } } }, "get": { "responses": { "200": { "description": "ok" } } } }
+  }
+}
+
